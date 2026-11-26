@@ -1,0 +1,29 @@
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Java
+*.class
+
+# Logs
+*.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Base de datos local
+*.db
+*.sqlite
+*.sqlite3
+
+# Configuración local
+.env

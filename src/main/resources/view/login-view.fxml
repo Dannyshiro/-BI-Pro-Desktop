@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.ejemplo.bipro.controller.LoginController"
+      prefWidth="1200.0" prefHeight="760.0">
+
+    <VBox styleClass="login-panel" spacing="28.0" prefWidth="520.0" maxWidth="560.0">
+        <HBox spacing="12.0" alignment="CENTER_LEFT">
+            <Label text="BI" styleClass="logo-box"/>
+            <VBox>
+                <Label text="BI Pro" styleClass="logo-titulo"/>
+                <Label text="Business Intelligence" styleClass="logo-sub"/>
+            </VBox>
+        </HBox>
+        <Region VBox.vgrow="ALWAYS"/>
+        <Label text="Ventas, inventario y finanzas de tu negocio en un solo lugar." styleClass="login-titulo-grande"/>
+        <Label text="Abre la caja, registra ventas, repón stock con órdenes de compra y cierra el día con un diagnóstico automático."
+               styleClass="login-texto"/>
+        <Region VBox.vgrow="ALWAYS"/>
+        <HBox spacing="10.0">
+            <Label text="1 · Abrir caja" styleClass="login-paso" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+            <Label text="2 · Vender" styleClass="login-paso" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+            <Label text="3 · Reponer" styleClass="login-paso" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+            <Label text="4 · Cerrar" styleClass="login-paso" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+        </HBox>
+    </VBox>
+
+    <StackPane styleClass="login-form" HBox.hgrow="ALWAYS">
+        <VBox spacing="16.0" maxWidth="380.0" alignment="CENTER_LEFT">
+            <Label text="Iniciar sesión" styleClass="titulo-modulo"/>
+            <Label fx:id="lblEmpresa" styleClass="caption"/>
+            <VBox spacing="6.0">
+                <Label text="Usuario" styleClass="etiqueta-campo"/>
+                <TextField fx:id="txtUsuario" promptText="ej. atorres" onAction="#onIngresar"/>
+            </VBox>
+            <VBox spacing="6.0">
+                <Label text="Contraseña" styleClass="etiqueta-campo"/>
+                <PasswordField fx:id="txtClave" onAction="#onIngresar"/>
+            </VBox>
+            <Label fx:id="lblError" styleClass="error-texto" wrapText="true"/>
+            <Button text="Ingresar" onAction="#onIngresar" styleClass="accent"
+                    maxWidth="Infinity" prefHeight="42.0" defaultButton="true"/>
+            <Separator/>
+            <Label text="USUARIOS DE DEMOSTRACIÓN · CLAVE 1234" styleClass="caption"/>
+            <VBox fx:id="boxDemo" spacing="8.0"/>
+        </VBox>
+    </StackPane>
+</HBox>
