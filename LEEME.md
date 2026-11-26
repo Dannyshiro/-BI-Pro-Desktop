@@ -6,7 +6,7 @@ JavaFX 21 + Spring Boot 3.3 + JPA + Lombok + SQLite. Requiere JDK 17 o superior 
 ```
 mvn clean javafx:run
 ```
-En IntelliJ: abre la carpeta como proyecto Maven y ejecuta `Launcher`
+En IntelliJ: abre la carpeta como proyecto Maven y ejecuta `DYLauncher`
 (activa *Annotation Processing* para Lombok).
 
 ## Usuarios de demostración (clave 1234)
@@ -26,4 +26,4 @@ Abrir caja → Vender → Reponer (orden de compra sugerida → recibir) → Cer
 - `service/` reglas de negocio
 - `controller/` pantallas JavaFX (+ `dialogo/`)
 - `ui/` utilidades visuales
-- `resources/view/` FXML, `resources/css/app.css` tema rojo/negro/blanco
+- `resources/view/` FXML, `resources/css/dy-app.css` tema rojo/negro/blanco

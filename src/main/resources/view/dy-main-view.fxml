@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.dy.bipro.controller.DYMainController"
+            styleClass="shell">
+
+    <left>
+        <VBox styleClass="sidebar" prefWidth="236.0">
+            <BorderPane.margin><Insets top="12.0" bottom="12.0" left="12.0"/></BorderPane.margin>
+            <HBox spacing="10.0" alignment="CENTER_LEFT">
+                <padding><Insets left="8.0" bottom="14.0"/></padding>
+                <Label text="BI" styleClass="logo-box"/>
+                <VBox>
+                    <Label text="BI Pro" styleClass="logo-titulo"/>
+                    <Label text="Business Intelligence" styleClass="logo-sub"/>
+                </VBox>
+            </HBox>
+            <Label text="MÓDULOS" styleClass="sidebar-seccion"/>
+            <VBox fx:id="menu" spacing="4.0"/>
+            <Region VBox.vgrow="ALWAYS"/>
+            <Button fx:id="btnConfig" text="Configuración" onAction="#onConfig"
+                    styleClass="sidebar-item" maxWidth="Infinity"/>
+            <HBox spacing="10.0" alignment="CENTER_LEFT" styleClass="usuario-box">
+                <Label fx:id="lblIniciales" styleClass="avatar"/>
+                <VBox HBox.hgrow="ALWAYS">
+                    <Label fx:id="lblUsuario" styleClass="usuario-nombre"/>
+                    <Label fx:id="lblRol" styleClass="usuario-rol"/>
+                </VBox>
+                <Button fx:id="btnSalir" onAction="#onLogout" styleClass="boton-salir"/>
+            </HBox>
+        </VBox>
+    </left>
+
+    <center>
+        <BorderPane>
+            <top>
+                <HBox styleClass="barra-superior">
+                    <VBox HBox.hgrow="ALWAYS">
+                        <Label fx:id="lblTitulo" styleClass="titulo-modulo"/>
+                        <Label fx:id="lblFecha" styleClass="caption"/>
+                    </VBox>
+                    <ComboBox fx:id="cmbRango" prefWidth="180.0"/>
+                    <Button fx:id="btnCaja" onAction="#onCaja" styleClass="chip"/>
+                    <StackPane>
+                        <Button fx:id="btnNotif" onAction="#onNotificaciones" styleClass="chip"/>
+                        <Label fx:id="lblBadge" styleClass="contador" StackPane.alignment="TOP_RIGHT"
+                               translateX="8.0" translateY="-8.0" mouseTransparent="true"/>
+                    </StackPane>
+                    <ToggleButton fx:id="tglTema" onAction="#onTema" styleClass="chip"/>
+                </HBox>
+            </top>
+            <center>
+                <StackPane fx:id="contenido" styleClass="contenido"/>
+            </center>
+            <right>
+                <VBox fx:id="panelNotif" styleClass="panel-notif" visible="false" managed="false">
+                    <HBox alignment="CENTER_LEFT">
+                        <Label text="Notificaciones" styleClass="h3"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Button text="Marcar todas como leídas" onAction="#onMarcarLeidas" styleClass="flat"/>
+                    </HBox>
+                    <ListView fx:id="lstNotif" styleClass="lista-plana" VBox.vgrow="ALWAYS"/>
+                </VBox>
+            </right>
+        </BorderPane>
+    </center>
+</BorderPane>

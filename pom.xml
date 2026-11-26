@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.ejemplo</groupId>
+    <groupId>com.dy</groupId>
     <artifactId>bi-pro-desktop</artifactId>
     <version>1.0.0</version>
     <name>BI Pro Desktop</name>
@@ -90,7 +90,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.ejemplo.bipro.Launcher</mainClass>
+                    <mainClass>com.dy.bipro.DYLauncher</mainClass>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
@@ -104,7 +104,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>com.ejemplo.bipro.Launcher</mainClass>
+                    <mainClass>com.dy.bipro.DYLauncher</mainClass>
                 </configuration>
             </plugin>
         </plugins>
